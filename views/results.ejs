@@ -1,4 +1,17 @@
-<h1>results page from ejs file</h1>
-<% data["Search"].forEach(function(movie){%>
-<li><%= movie["Title"]%></li>
-<% })%>
+<!doctype html>
+<html lang="en">
+<head>
+  <% include partials/header%>
+</head>
+<body>
+  <div class="main-container">
+    <h1>These are the movies that had Pencil in it</h1>
+    <% data["Search"].forEach(function(movie){%>
+      <ul>
+        <li><%= movie["Title"]%></li>
+      </ul>
+    <% })%>
+  </div>
+<% include partials/footer%>
+</body>
+</html>
